@@ -1,0 +1,489 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1098,841" sap2010:WorkflowViewState.IdRef="Main_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sa="clr-namespace:Smartsheet.Api;assembly=smartsheet-csharp-sdk" xmlns:sam="clr-namespace:Smartsheet.Api.Models;assembly=smartsheet-csharp-sdk" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ubac="clr-namespace:UiPath.BAF.Activities.ContextModel;assembly=UiPath.Smartsheet.Activities" xmlns:ubme="clr-namespace:UiPath.BAF.Models.Entity;assembly=UiPath.Smartsheet" xmlns:ucm="clr-namespace:UiPath.CodeGen.Model;assembly=UiPath.Smartsheet" xmlns:ucmc="clr-namespace:UiPath.CodeGen.Models.Connection;assembly=UiPath.Smartsheet" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:usa="clr-namespace:UiPath.Smartsheet.Activities;assembly=UiPath.Smartsheet.Activities" xmlns:usaa="clr-namespace:UiPath.Smartsheet.Activities.Attachments;assembly=UiPath.Smartsheet.Activities" xmlns:usar="clr-namespace:UiPath.Smartsheet.Activities.Rows;assembly=UiPath.Smartsheet.Activities" xmlns:usm="clr-namespace:UiPath.Smartsheet.Models;assembly=UiPath.Smartsheet" xmlns:uss="clr-namespace:UiPath.Smartsheet.Services;assembly=UiPath.Smartsheet" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="54">
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>UiPath.BAF.Models.Response</x:String>
+      <x:String>Smartsheet.Api.Models</x:String>
+      <x:String>UiPath.Smartsheet.Models</x:String>
+      <x:String>UiPath.BAF.Models.Connection</x:String>
+      <x:String>UiPath.CodeGen.Models.Connection</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.Net</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+      <x:String>UiPath.Smartsheet.Model</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.BAF.Models.Entity</x:String>
+      <x:String>UiPath.BAF.Models.CrudOperation</x:String>
+      <x:String>UiPath.Smartsheet.Activities.Comments</x:String>
+      <x:String>UiPath.Smartsheet.Activities</x:String>
+      <x:String>UiPath.CodeGen.Activities</x:String>
+      <x:String>UiPath.BAF.Activities</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.Smartsheet.Activities.Attachments</x:String>
+      <x:String>UiPath.Smartsheet.Activities.Discussions</x:String>
+      <x:String>UiPath.Smartsheet.Activities.Folders</x:String>
+      <x:String>UiPath.Smartsheet.Activities.Reports</x:String>
+      <x:String>UiPath.Smartsheet.Activities.Rows</x:String>
+      <x:String>UiPath.Smartsheet.Activities.Sheets</x:String>
+      <x:String>UiPath.Smartsheet.Activities.Workspaces</x:String>
+      <x:String>UiPath.Smartsheet.Activities.Groups</x:String>
+      <x:String>UiPath.Smartsheet.Activities.Users</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.BAF.Enums</x:String>
+      <x:String>UiPath.BAF.Properties</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="56">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Box</AssemblyReference>
+      <AssemblyReference>smartsheet-csharp-sdk</AssemblyReference>
+      <AssemblyReference>UiPath.Smartsheet</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>UiPath.Smartsheet.Activities</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Flowchart DisplayName="Main" sap:VirtualizedContainerService.HintSize="758,636" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+    <Flowchart.Variables>
+      <Variable x:TypeArguments="x:String" Name="SM_ApiToken">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String">yourapitoken</Literal>
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:Int32" Name="TempNum" />
+      <Variable x:TypeArguments="x:Int64" Name="AttachmentId" />
+      <Variable x:TypeArguments="x:Int64" Name="SheetId" />
+      <Variable x:TypeArguments="sam:Row[]" Name="RowsRetrieved" />
+      <Variable x:TypeArguments="sam:Row" Name="RowRetrieved" />
+      <Variable x:TypeArguments="x:String" Name="downloadPath" />
+      <Variable x:TypeArguments="sam:Row" Name="RowUpdate" />
+    </Flowchart.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <av:Point x:Key="ShapeLocation">0,12.5</av:Point>
+        <av:Size x:Key="ShapeSize">60,75</av:Size>
+        <x:Double x:Key="Width">724</x:Double>
+        <av:PointCollection x:Key="ConnectorLocation">30,87.5 30,190 90,190</av:PointCollection>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Flowchart.StartNode>
+      <x:Reference>__ReferenceID15</x:Reference>
+    </Flowchart.StartNode>
+    <FlowStep x:Name="__ReferenceID15">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <av:Point x:Key="ShapeLocation">90,164.5</av:Point>
+          <av:Size x:Key="ShapeSize">200,51</av:Size>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <usa:SmartsheetScopeActivity Connection="{x:Null}" DesignConnectionRequest="{x:Null}" ExistingConnection="{x:Null}" SelectedDesignAuthType="{x:Null}" SwaggerClient="{x:Null}" DesignConnectionEnabled="False" DisplayName="Smartsheet Application Scope" ExistingConnectionType="usm:SmartsheetConnection" sap:VirtualizedContainerService.HintSize="738,1951" sap2010:WorkflowViewState.IdRef="SmartsheetScopeActivity_1" RefreshCacheEnabled="False" SelectedAuthType="API Token" TelemetryEnabled="False" ThrowExceptionOnError="False">
+        <usa:SmartsheetScopeActivity.Body>
+          <ActivityAction x:TypeArguments="ubac:ScopeActivityContext">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="ubac:ScopeActivityContext" Name="ScopeActivityContext" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="704,1810" sap2010:WorkflowViewState.IdRef="Sequence_1">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <Assign sap:VirtualizedContainerService.HintSize="662,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:Int64">[SheetId]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:Int64">[Int64.Parse("yoursheetid")]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <Assign sap:VirtualizedContainerService.HintSize="662,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">[downloadPath]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String">yourdownloadpath</InArgument>
+                </Assign.Value>
+              </Assign>
+              <usar:ListRows Category="{x:Null}" FieldsSelectionPageProperties="{x:Null}" ScopeActivityType="{x:Null}" Section="{x:Null}" Status="{x:Null}" BusinessEntityName="ListRows" ConfiguredBusinessEntity="ListRows" CrudOperation="Function" DesignConnectionEnabled="False" DisplayName="List Rows" HideCascadingDropdown="False" sap:VirtualizedContainerService.HintSize="662,61" sap2010:WorkflowViewState.IdRef="ListRows_1">
+                <usar:ListRows.BusinessEntity>
+                  <ubme:BusinessEntity Id="{x:Null}" Metadata="{x:Reference __ReferenceID0}" Name="ListRows">
+                    <ubme:BusinessEntity.AllFields>
+                      <scg:List x:TypeArguments="ubme:EntityField" Capacity="0" />
+                    </ubme:BusinessEntity.AllFields>
+                    <ubme:BusinessEntity.EntityMetadata>
+                      <ubme:EntityMetadata Description="{x:Null}" EligibleOperations="-1" IsCustomEntity="False" Name="ListRows">
+                        <ubme:EntityMetadata.Metadata>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID0">
+                            <x:Type Type="sa:SmartsheetClient" x:Key="Client" />
+                          </scg:Dictionary>
+                        </ubme:EntityMetadata.Metadata>
+                      </ubme:EntityMetadata>
+                    </ubme:BusinessEntity.EntityMetadata>
+                    <ubme:BusinessEntity.SelectedFields>
+                      <scg:List x:TypeArguments="ubme:EntityField" Capacity="7">
+                        <x:Reference>__ReferenceID1</x:Reference>
+                        <x:Reference>__ReferenceID2</x:Reference>
+                        <x:Reference>__ReferenceID3</x:Reference>
+                        <x:Reference>__ReferenceID4</x:Reference>
+                        <x:Reference>__ReferenceID5</x:Reference>
+                        <x:Reference>__ReferenceID6</x:Reference>
+                        <x:Reference>__ReferenceID7</x:Reference>
+                      </scg:List>
+                    </ubme:BusinessEntity.SelectedFields>
+                  </ubme:BusinessEntity>
+                </usar:ListRows.BusinessEntity>
+                <usar:ListRows.PopulatedAPIParameters>
+                  <scg:Dictionary x:TypeArguments="x:String, ubme:EntityField" />
+                </usar:ListRows.PopulatedAPIParameters>
+                <usar:ListRows.SelectedFields>
+                  <scg:List x:TypeArguments="ubme:EntityField" Capacity="7">
+                    <ucm:CodeGenEntityField ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" x:Name="__ReferenceID1" ArgumentDirection="In" ArgumentType="x:Int64" DataType="Int64" Description="The sheet you want rows for." DisplayName="Sheet Id" FieldName="Sheet Id" FormDataType="ExpressionTextBox" IsCustomField="False" IsDefault="False" IsDeletable="True" IsIdField="False" IsSelected="False" Mandatory="True" ShouldFilterOnChange="False">
+                      <ucm:CodeGenEntityField.ArgumentValue>
+                        <InArgument x:TypeArguments="x:Int64">[SheetId]</InArgument>
+                      </ucm:CodeGenEntityField.ArgumentValue>
+                    </ucm:CodeGenEntityField>
+                    <ucm:CodeGenEntityField ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" x:Name="__ReferenceID2" ArgumentDirection="In" ArgumentType="s:Int64[]" DataType="Int64[]" Description="Filter results to only these columns." DisplayName="Column Ids" FieldName="Column Ids" FormDataType="ExpressionTextBox" IsCustomField="False" IsDefault="False" IsDeletable="True" IsIdField="False" IsSelected="False" Mandatory="False" ShouldFilterOnChange="False">
+                      <ucm:CodeGenEntityField.ArgumentValue>
+                        <InArgument x:TypeArguments="s:Int64[]" />
+                      </ucm:CodeGenEntityField.ArgumentValue>
+                    </ucm:CodeGenEntityField>
+                    <ucm:CodeGenEntityField ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" x:Name="__ReferenceID3" ArgumentDirection="In" ArgumentType="s:Int64[]" DataType="Int64[]" Description="Filter results to only these rows." DisplayName="Row Ids" FieldName="Row Ids" FormDataType="ExpressionTextBox" IsCustomField="False" IsDefault="False" IsDeletable="True" IsIdField="False" IsSelected="False" Mandatory="False" ShouldFilterOnChange="False">
+                      <ucm:CodeGenEntityField.ArgumentValue>
+                        <InArgument x:TypeArguments="s:Int64[]" />
+                      </ucm:CodeGenEntityField.ArgumentValue>
+                    </ucm:CodeGenEntityField>
+                    <ucm:CodeGenEntityField ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" x:Name="__ReferenceID4" ArgumentDirection="In" ArgumentType="s:Int32[]" DataType="Int32[]" Description="Filter results to only these row numbers." DisplayName="Row Numbers" FieldName="Row Numbers" FormDataType="ExpressionTextBox" IsCustomField="False" IsDefault="False" IsDeletable="True" IsIdField="False" IsSelected="False" Mandatory="False" ShouldFilterOnChange="False">
+                      <ucm:CodeGenEntityField.ArgumentValue>
+                        <InArgument x:TypeArguments="s:Int32[]" />
+                      </ucm:CodeGenEntityField.ArgumentValue>
+                    </ucm:CodeGenEntityField>
+                    <ucm:CodeGenEntityField ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" x:Name="__ReferenceID5" ArgumentDirection="In" ArgumentType="x:Int32" DataType="Int32" Description="Which page to return." DisplayName="Page" FieldName="Page" FormDataType="ExpressionTextBox" IsCustomField="False" IsDefault="False" IsDeletable="True" IsIdField="False" IsSelected="False" Mandatory="False" ShouldFilterOnChange="False">
+                      <ucm:CodeGenEntityField.ArgumentValue>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ucm:CodeGenEntityField.ArgumentValue>
+                    </ucm:CodeGenEntityField>
+                    <ucm:CodeGenEntityField ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" x:Name="__ReferenceID6" ArgumentDirection="In" ArgumentType="x:Int32" DataType="Int32" Description="The maximum number of items to return per page." DisplayName="Page Size" FieldName="Page Size" FormDataType="ExpressionTextBox" IsCustomField="False" IsDefault="False" IsDeletable="True" IsIdField="False" IsSelected="False" Mandatory="False" ShouldFilterOnChange="False">
+                      <ucm:CodeGenEntityField.ArgumentValue>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ucm:CodeGenEntityField.ArgumentValue>
+                    </ucm:CodeGenEntityField>
+                    <ucm:CodeGenEntityField ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" x:Name="__ReferenceID7" ArgumentDirection="Out" ArgumentType="sam:Row[]" DataType="Row[]" Description="The rows retrieved." DisplayName="Rows" FieldName="Rows" FormDataType="ExpressionTextBox" IsCustomField="False" IsDefault="False" IsDeletable="True" IsIdField="False" IsSelected="False" Mandatory="False" ShouldFilterOnChange="False">
+                      <ucm:CodeGenEntityField.ArgumentValue>
+                        <OutArgument x:TypeArguments="sam:Row[]">[RowsRetrieved]</OutArgument>
+                      </ucm:CodeGenEntityField.ArgumentValue>
+                    </ucm:CodeGenEntityField>
+                  </scg:List>
+                </usar:ListRows.SelectedFields>
+              </usar:ListRows>
+              <ui:ForEach x:TypeArguments="sam:Row" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="662,1417" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[RowsRetrieved]">
+                <ui:ForEach.Body>
+                  <ActivityAction x:TypeArguments="sam:Row">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="sam:Row" Name="item" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="626,1283" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <usar:GetRow BusinessEntityName="{x:Null}" Status="{x:Null}" ConfiguredBusinessEntity="GetRow" CrudOperation="Function" DesignConnectionEnabled="False" DisplayName="Get Row" sap:VirtualizedContainerService.HintSize="584,236" sap2010:WorkflowViewState.IdRef="GetRow_1" ScopeActivityType="usa:SmartsheetScopeActivity">
+                        <usar:GetRow.BusinessEntity>
+                          <ubme:BusinessEntity Id="{x:Null}" Metadata="{x:Reference __ReferenceID8}" Name="GetRow">
+                            <ubme:BusinessEntity.AllFields>
+                              <scg:List x:TypeArguments="ubme:EntityField" Capacity="0" />
+                            </ubme:BusinessEntity.AllFields>
+                            <ubme:BusinessEntity.EntityMetadata>
+                              <ubme:EntityMetadata Description="{x:Null}" EligibleOperations="-1" IsCustomEntity="False" Name="GetRow">
+                                <ubme:EntityMetadata.Metadata>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID8">
+                                    <x:Type Type="sa:SmartsheetClient" x:Key="Client" />
+                                  </scg:Dictionary>
+                                </ubme:EntityMetadata.Metadata>
+                              </ubme:EntityMetadata>
+                            </ubme:BusinessEntity.EntityMetadata>
+                            <ubme:BusinessEntity.SelectedFields>
+                              <scg:List x:TypeArguments="ubme:EntityField" Capacity="0" />
+                            </ubme:BusinessEntity.SelectedFields>
+                          </ubme:BusinessEntity>
+                        </usar:GetRow.BusinessEntity>
+                        <usar:GetRow.PopulatedAPIParameters>
+                          <scg:Dictionary x:TypeArguments="x:String, ubme:EntityField" />
+                        </usar:GetRow.PopulatedAPIParameters>
+                        <usar:GetRow.SelectedFields>
+                          <scg:List x:TypeArguments="ubme:EntityField" Capacity="8">
+                            <ucm:CodeGenEntityField ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" ArgumentDirection="In" ArgumentType="x:Int64" DataType="Int64" Description="the sheetId" DisplayName="SheetId" FieldName="SheetId" FormDataType="ExpressionTextBox" IsCustomField="False" IsDefault="False" IsDeletable="True" IsIdField="False" IsSelected="False" Mandatory="True" ShouldFilterOnChange="False">
+                              <ucm:CodeGenEntityField.ArgumentValue>
+                                <InArgument x:TypeArguments="x:Int64">[SheetId]</InArgument>
+                              </ucm:CodeGenEntityField.ArgumentValue>
+                            </ucm:CodeGenEntityField>
+                            <ucm:CodeGenEntityField ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" ArgumentDirection="In" ArgumentType="x:Int64" DataType="Int64" Description="the rowId" DisplayName="RowId" FieldName="RowId" FormDataType="ExpressionTextBox" IsCustomField="False" IsDefault="False" IsDeletable="True" IsIdField="False" IsSelected="False" Mandatory="True" ShouldFilterOnChange="False">
+                              <ucm:CodeGenEntityField.ArgumentValue>
+                                <InArgument x:TypeArguments="x:Int64">[item.Id.Value]</InArgument>
+                              </ucm:CodeGenEntityField.ArgumentValue>
+                            </ucm:CodeGenEntityField>
+                            <ucm:CodeGenEntityField ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" SampleValue="{x:Null}" ArgumentDirection="In" ArgumentType="sam:RowInclusion[]" DataType="RowInclusion[]" Description="comma-separated list of elements to include in the response." DisplayName="Include" FieldName="Include" FormDataType="MultiSelect" IsCustomField="False" IsDefault="False" IsDeletable="True" IsIdField="False" IsSelected="False" Mandatory="False" ShouldFilterOnChange="False">
+                              <ucm:CodeGenEntityField.ArgumentValue>
+                                <InArgument x:TypeArguments="sam:RowInclusion[]" />
+                              </ucm:CodeGenEntityField.ArgumentValue>
+                              <ucm:CodeGenEntityField.Value>
+                                <x:Array Type="x:Object">
+                                  <sam:RowInclusion>ATTACHMENTS</sam:RowInclusion>
+                                </x:Array>
+                              </ucm:CodeGenEntityField.Value>
+                            </ucm:CodeGenEntityField>
+                            <ucm:CodeGenEntityField ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" ArgumentDirection="In" ArgumentType="sam:RowExclusion[]" DataType="RowExclusion[]" Description="a comma-separated list of optional objects to exclude in the response." DisplayName="Exclude" FieldName="Exclude" FormDataType="MultiSelect" IsCustomField="False" IsDefault="False" IsDeletable="True" IsIdField="False" IsSelected="False" Mandatory="False" ShouldFilterOnChange="False">
+                              <ucm:CodeGenEntityField.ArgumentValue>
+                                <InArgument x:TypeArguments="sam:RowExclusion[]" />
+                              </ucm:CodeGenEntityField.ArgumentValue>
+                            </ucm:CodeGenEntityField>
+                            <ucm:CodeGenEntityField ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" ArgumentDirection="Out" ArgumentType="sam:Row" DataType="Row" Description="The row retrieved" DisplayName="Row" FieldName="Row" FormDataType="ExpressionTextBox" IsCustomField="False" IsDefault="False" IsDeletable="True" IsIdField="False" IsSelected="False" Mandatory="False" ShouldFilterOnChange="False">
+                              <ucm:CodeGenEntityField.ArgumentValue>
+                                <OutArgument x:TypeArguments="sam:Row">[RowRetrieved]</OutArgument>
+                              </ucm:CodeGenEntityField.ArgumentValue>
+                            </ucm:CodeGenEntityField>
+                          </scg:List>
+                        </usar:GetRow.SelectedFields>
+                      </usar:GetRow>
+                      <If Condition="[RowRetrieved.Attachments is Nothing]" sap:VirtualizedContainerService.HintSize="584,915" sap2010:WorkflowViewState.IdRef="If_1">
+                        <If.Else>
+                          <ui:ForEach x:TypeArguments="sam:Attachment" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="439,767" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[RowRetrieved.Attachments]">
+                            <ui:ForEach.Body>
+                              <ActivityAction x:TypeArguments="sam:Attachment">
+                                <ActivityAction.Argument>
+                                  <DelegateInArgument x:TypeArguments="sam:Attachment" Name="attachment" />
+                                </ActivityAction.Argument>
+                                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="403,633" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <usaa:GetAttachment BusinessEntityName="{x:Null}" ScopeActivityType="{x:Null}" Status="{x:Null}" ConfiguredBusinessEntity="GetAttachment" CrudOperation="Function" DesignConnectionEnabled="False" DisplayName="Get Attachment" sap:VirtualizedContainerService.HintSize="361,236" sap2010:WorkflowViewState.IdRef="GetAttachment_1">
+                                    <usaa:GetAttachment.BusinessEntity>
+                                      <ubme:BusinessEntity Id="{x:Null}" Metadata="{x:Reference __ReferenceID9}" Name="GetAttachment">
+                                        <ubme:BusinessEntity.AllFields>
+                                          <scg:List x:TypeArguments="ubme:EntityField" Capacity="0" />
+                                        </ubme:BusinessEntity.AllFields>
+                                        <ubme:BusinessEntity.EntityMetadata>
+                                          <ubme:EntityMetadata Description="{x:Null}" EligibleOperations="-1" IsCustomEntity="False" Name="GetAttachment">
+                                            <ubme:EntityMetadata.Metadata>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID9">
+                                                <x:Type Type="sa:SmartsheetClient" x:Key="Client" />
+                                              </scg:Dictionary>
+                                            </ubme:EntityMetadata.Metadata>
+                                          </ubme:EntityMetadata>
+                                        </ubme:BusinessEntity.EntityMetadata>
+                                        <ubme:BusinessEntity.SelectedFields>
+                                          <scg:List x:TypeArguments="ubme:EntityField" Capacity="0" />
+                                        </ubme:BusinessEntity.SelectedFields>
+                                      </ubme:BusinessEntity>
+                                    </usaa:GetAttachment.BusinessEntity>
+                                    <usaa:GetAttachment.PopulatedAPIParameters>
+                                      <scg:Dictionary x:TypeArguments="x:String, ubme:EntityField" />
+                                    </usaa:GetAttachment.PopulatedAPIParameters>
+                                    <usaa:GetAttachment.SelectedFields>
+                                      <scg:List x:TypeArguments="ubme:EntityField" Capacity="8">
+                                        <ucm:CodeGenEntityField ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" ArgumentDirection="In" ArgumentType="x:Int64" DataType="Int64" Description="the sheetId" DisplayName="SheetId" FieldName="SheetId" FormDataType="ExpressionTextBox" IsCustomField="False" IsDefault="False" IsDeletable="True" IsIdField="False" IsSelected="False" Mandatory="True" ShouldFilterOnChange="False">
+                                          <ucm:CodeGenEntityField.ArgumentValue>
+                                            <InArgument x:TypeArguments="x:Int64">[SheetId]</InArgument>
+                                          </ucm:CodeGenEntityField.ArgumentValue>
+                                        </ucm:CodeGenEntityField>
+                                        <ucm:CodeGenEntityField ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" ArgumentDirection="In" ArgumentType="x:Int64" DataType="Int64" Description="the attachmentId" DisplayName="AttachmentId" FieldName="AttachmentId" FormDataType="ExpressionTextBox" IsCustomField="False" IsDefault="False" IsDeletable="True" IsIdField="False" IsSelected="False" Mandatory="True" ShouldFilterOnChange="False">
+                                          <ucm:CodeGenEntityField.ArgumentValue>
+                                            <InArgument x:TypeArguments="x:Int64">[attachment.Id.Value]</InArgument>
+                                          </ucm:CodeGenEntityField.ArgumentValue>
+                                        </ucm:CodeGenEntityField>
+                                        <ucm:CodeGenEntityField ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="The path to download the attachment to" DisplayName="Download Folder Path" FieldName="Download Folder Path" FormDataType="FolderPicker" IsCustomField="False" IsDefault="False" IsDeletable="True" IsIdField="False" IsSelected="False" Mandatory="False" ShouldFilterOnChange="False">
+                                          <ucm:CodeGenEntityField.ArgumentValue>
+                                            <InArgument x:TypeArguments="x:String">[downloadPath]</InArgument>
+                                          </ucm:CodeGenEntityField.ArgumentValue>
+                                        </ucm:CodeGenEntityField>
+                                        <ucm:CodeGenEntityField ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="The file name with extension to downloaded the attachment as" DisplayName="File Name" FieldName="File Name" FormDataType="ExpressionTextBox" IsCustomField="False" IsDefault="False" IsDeletable="True" IsIdField="False" IsSelected="False" Mandatory="False" ShouldFilterOnChange="False">
+                                          <ucm:CodeGenEntityField.ArgumentValue>
+                                            <InArgument x:TypeArguments="x:String" />
+                                          </ucm:CodeGenEntityField.ArgumentValue>
+                                        </ucm:CodeGenEntityField>
+                                        <ucm:CodeGenEntityField ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" ArgumentDirection="Out" ArgumentType="sam:Attachment" DataType="Attachment" Description="" DisplayName="Attachment" FieldName="Attachment" FormDataType="ExpressionTextBox" IsCustomField="False" IsDefault="False" IsDeletable="True" IsIdField="False" IsSelected="False" Mandatory="False" ShouldFilterOnChange="False">
+                                          <ucm:CodeGenEntityField.ArgumentValue>
+                                            <OutArgument x:TypeArguments="sam:Attachment" />
+                                          </ucm:CodeGenEntityField.ArgumentValue>
+                                        </ucm:CodeGenEntityField>
+                                      </scg:List>
+                                    </usaa:GetAttachment.SelectedFields>
+                                  </usaa:GetAttachment>
+                                  <Assign sap:VirtualizedContainerService.HintSize="361,60" sap2010:WorkflowViewState.IdRef="Assign_3">
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="x:Int32">[TempNum]</OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="x:Int32">[CInt(Int((6 * Rnd()) + 1))]</InArgument>
+                                    </Assign.Value>
+                                  </Assign>
+                                  <Assign sap:VirtualizedContainerService.HintSize="361,64" sap2010:WorkflowViewState.IdRef="Assign_4">
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="sam:Row">[RowUpdate]</OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="sam:Row" xml:space="preserve">[New Row() With { 
+.Id = RowRetrieved.Id,
+.Cells = New List(Of Cell) From {
+	New Cell() With {.Value = TempNum, .ColumnId = RowRetrieved.Cells(3).ColumnId}
+	}
+}]</InArgument>
+                                    </Assign.Value>
+                                  </Assign>
+                                  <usar:UpdateRows Category="{x:Null}" FieldsSelectionPageProperties="{x:Null}" ScopeActivityType="{x:Null}" Section="{x:Null}" Status="{x:Null}" BusinessEntityName="UpdateRows" ConfiguredBusinessEntity="UpdateRows" CrudOperation="Function" DesignConnectionEnabled="False" DisplayName="Update Rows" HideCascadingDropdown="False" sap:VirtualizedContainerService.HintSize="361,61" sap2010:WorkflowViewState.IdRef="UpdateRows_1">
+                                    <usar:UpdateRows.BusinessEntity>
+                                      <ubme:BusinessEntity Id="{x:Null}" Metadata="{x:Reference __ReferenceID10}" Name="UpdateRows">
+                                        <ubme:BusinessEntity.AllFields>
+                                          <scg:List x:TypeArguments="ubme:EntityField" Capacity="0" />
+                                        </ubme:BusinessEntity.AllFields>
+                                        <ubme:BusinessEntity.EntityMetadata>
+                                          <ubme:EntityMetadata Description="{x:Null}" EligibleOperations="-1" IsCustomEntity="False" Name="UpdateRows">
+                                            <ubme:EntityMetadata.Metadata>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID10">
+                                                <x:Type Type="sa:SmartsheetClient" x:Key="Client" />
+                                              </scg:Dictionary>
+                                            </ubme:EntityMetadata.Metadata>
+                                          </ubme:EntityMetadata>
+                                        </ubme:BusinessEntity.EntityMetadata>
+                                        <ubme:BusinessEntity.SelectedFields>
+                                          <scg:List x:TypeArguments="ubme:EntityField" Capacity="4">
+                                            <x:Reference>__ReferenceID11</x:Reference>
+                                            <x:Reference>__ReferenceID12</x:Reference>
+                                            <x:Reference>__ReferenceID13</x:Reference>
+                                            <x:Reference>__ReferenceID14</x:Reference>
+                                          </scg:List>
+                                        </ubme:BusinessEntity.SelectedFields>
+                                      </ubme:BusinessEntity>
+                                    </usar:UpdateRows.BusinessEntity>
+                                    <usar:UpdateRows.PopulatedAPIParameters>
+                                      <scg:Dictionary x:TypeArguments="x:String, ubme:EntityField">
+                                        <ubme:EntityField DefaultValue="{x:Null}" FieldFullName="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" x:Key="RowsArrayItem1" ArgumentDirection="In" ArgumentType="sam:Row" DataType="Smartsheet.Api.Models.Row" Description="An array of Row objects." FieldName="RowsArrayItem1" FormDataType="ExpressionTextBox" IsCustomField="False" IsDefault="False" IsDeletable="True" IsIdField="False" IsSelected="False" Mandatory="False" ShouldFilterOnChange="False">
+                                          <ubme:EntityField.ArgumentValue>
+                                            <InArgument x:TypeArguments="sam:Row">[RowUpdate]</InArgument>
+                                          </ubme:EntityField.ArgumentValue>
+                                        </ubme:EntityField>
+                                      </scg:Dictionary>
+                                    </usar:UpdateRows.PopulatedAPIParameters>
+                                    <usar:UpdateRows.SelectedFields>
+                                      <scg:List x:TypeArguments="ubme:EntityField" Capacity="4">
+                                        <ucm:CodeGenEntityField ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" x:Name="__ReferenceID11" ArgumentDirection="In" ArgumentType="x:Int64" DataType="Int64" Description="The id of the sheet." DisplayName="Sheet Id" FieldName="Sheet Id" FormDataType="ExpressionTextBox" IsCustomField="False" IsDefault="False" IsDeletable="True" IsIdField="False" IsSelected="False" Mandatory="True" ShouldFilterOnChange="False">
+                                          <ucm:CodeGenEntityField.ArgumentValue>
+                                            <InArgument x:TypeArguments="x:Int64">[SheetId]</InArgument>
+                                          </ucm:CodeGenEntityField.ArgumentValue>
+                                        </ucm:CodeGenEntityField>
+                                        <ucm:CodeGenEntityField ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" x:Name="__ReferenceID12" ArgumentDirection="In" ArgumentType="sam:Row[]" DataType="Row[]" Description="An array of Row objects." DisplayName="Rows" FieldName="Rows" FormDataType="ExpressionTextBox" IsCustomField="False" IsDefault="False" IsDeletable="True" IsIdField="False" IsSelected="False" Mandatory="False" ShouldFilterOnChange="False">
+                                          <ucm:CodeGenEntityField.ArgumentValue>
+                                            <InArgument x:TypeArguments="sam:Row[]" />
+                                          </ucm:CodeGenEntityField.ArgumentValue>
+                                        </ucm:CodeGenEntityField>
+                                        <ucm:CodeGenEntityField ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" x:Name="__ReferenceID13" ArgumentDirection="In" ArgumentType="sd:DataTable" DataType="DataTable" Description="A data table that contains row information." DisplayName="Row Data" FieldName="Row Data" FormDataType="ExpressionTextBox" IsCustomField="False" IsDefault="False" IsDeletable="True" IsIdField="False" IsSelected="False" Mandatory="False" ShouldFilterOnChange="False">
+                                          <ucm:CodeGenEntityField.ArgumentValue>
+                                            <InArgument x:TypeArguments="sd:DataTable" />
+                                          </ucm:CodeGenEntityField.ArgumentValue>
+                                        </ucm:CodeGenEntityField>
+                                        <ucm:CodeGenEntityField ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" x:Name="__ReferenceID14" ArgumentDirection="Out" ArgumentType="sam:Row[]" DataType="Row[]" Description="The rows successfully updated." DisplayName="Rows Updated" FieldName="Rows Updated" FormDataType="ExpressionTextBox" IsCustomField="False" IsDefault="False" IsDeletable="True" IsIdField="False" IsSelected="False" Mandatory="False" ShouldFilterOnChange="False">
+                                          <ucm:CodeGenEntityField.ArgumentValue>
+                                            <OutArgument x:TypeArguments="sam:Row[]" />
+                                          </ucm:CodeGenEntityField.ArgumentValue>
+                                        </ucm:CodeGenEntityField>
+                                      </scg:List>
+                                    </usar:UpdateRows.SelectedFields>
+                                  </usar:UpdateRows>
+                                </Sequence>
+                              </ActivityAction>
+                            </ui:ForEach.Body>
+                          </ui:ForEach>
+                        </If.Else>
+                      </If>
+                    </Sequence>
+                  </ActivityAction>
+                </ui:ForEach.Body>
+              </ui:ForEach>
+            </Sequence>
+          </ActivityAction>
+        </usa:SmartsheetScopeActivity.Body>
+        <usa:SmartsheetScopeActivity.ConnectionParameters>
+          <scg:List x:TypeArguments="ucmc:ConnectionParam" Capacity="4">
+            <ucmc:ConnectionParam Value="{x:Null}" ArgumentDirection="In" ArgumentType="x:String" Description="The API token to use" Mandatory="True" Name="API Access Token">
+              <ucmc:ConnectionParam.ArgumentValue>
+                <InArgument x:TypeArguments="x:String">[SM_ApiToken]</InArgument>
+              </ucmc:ConnectionParam.ArgumentValue>
+            </ucmc:ConnectionParam>
+          </scg:List>
+        </usa:SmartsheetScopeActivity.ConnectionParameters>
+        <usa:SmartsheetScopeActivity.DesignConnectionParameters>
+          <scg:List x:TypeArguments="ucmc:ConnectionParam" Capacity="0" />
+        </usa:SmartsheetScopeActivity.DesignConnectionParameters>
+        <usa:SmartsheetScopeActivity.ServiceFactory>
+          <uss:SmartsheetServiceFactory />
+        </usa:SmartsheetScopeActivity.ServiceFactory>
+        <usa:SmartsheetScopeActivity.SupportedAuthTypes>
+          <scg:List x:TypeArguments="x:String" Capacity="4">
+            <x:String>Existing Connection</x:String>
+            <x:String>OAuth Authorization Code</x:String>
+            <x:String>API Token</x:String>
+            <x:String xml:space="preserve">OAuth Passthrough </x:String>
+          </scg:List>
+        </usa:SmartsheetScopeActivity.SupportedAuthTypes>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </usa:SmartsheetScopeActivity>
+    </FlowStep>
+  </Flowchart>
+</Activity>

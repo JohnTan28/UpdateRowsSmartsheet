@@ -1,0 +1,15 @@
+SmartSheet API Access Token (UiPath)
+Authorization: Bearer ll352u9jujauoqz4gstvsae05
+
+SmartSheet API key
+r4hGDMJRTgZvePePSk0If4w8TAbNGTDCnlkRe
+
+
+INDEX(Email1:Email2437,MATCH([Employee Name]2437,[Employee Name]1:[Employee Name]2437,0))
+
+RPA Bots Chemicals Expiry Tracker and Chemical Containers Disposal will deploy into production 20/09/2021
+
+“This RPA bot made this disposal process for expired materials much easier to manage.”
+- Shahreel Bin Abd Jalal, ASM PD Associate Scientist
+
+Thank you Shahreel for a successful launch and we look forward to more RPA integrations with PD lab process.
